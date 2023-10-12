@@ -6,7 +6,8 @@ public class lab1 {
     public static void main(String[] args) {
         //q3();
         //q4();
-        q5();
+        //q5();
+        q6();
     }
 
     public static void q3() {
@@ -62,4 +63,17 @@ public class lab1 {
         scanner.close();
     }
 
+    public static void q6() {
+        Scanner scanner = new Scanner(System.in);
+
+        String text = "International Burch University";
+        System.out.println("Enter how many times do you want to repeat this text: ");
+        int n = Integer.parseInt(scanner.nextLine());
+        int i = 0;
+        while(i < n) {
+            System.out.println(text);
+            i++;
+        }
+        scanner.close();
+    }
 }
