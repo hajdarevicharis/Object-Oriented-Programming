@@ -1,10 +1,12 @@
 package org.example;
+import javax.swing.text.Style;
 import java.util.Scanner;
 
 public class lab1 {
     public static void main(String[] args) {
         //q3();
-        q4();
+        //q4();
+        q5();
     }
 
     public static void q3() {
@@ -43,7 +45,21 @@ public class lab1 {
     }
 
     public static void q5() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = Integer.parseInt(scanner.nextLine());
+        int i = 0;
+        int sum = 0;
 
+        while (i <= n) {
+            int result = (int)Math.pow(2,i);
+            sum += result;
+            i++;
+        }
+
+        System.out.println("Your sum is: " + sum);
+
+        scanner.close();
     }
 
 }
