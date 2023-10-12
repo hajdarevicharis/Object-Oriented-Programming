@@ -7,7 +7,9 @@ public class lab1 {
         //q3();
         //q4();
         //q5();
-        q6();
+        //q6();
+        q7(5);
+        q7(9);
     }
 
     public static void q3() {
@@ -74,6 +76,16 @@ public class lab1 {
             System.out.println(text);
             i++;
         }
+        scanner.close();
+    }
+
+    public static void q7(int amount) {
+        Scanner scanner = new Scanner(System.in);
+
+        for(int i = 0; i < amount; i++) {
+            System.out.print("*");
+        }
+
         scanner.close();
     }
 }
