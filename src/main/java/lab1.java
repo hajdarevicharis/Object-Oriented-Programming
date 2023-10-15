@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class lab1 {
     public static void main(String[] args) {
-        q1();
+        //q1();
+        q2();
         //q3();
         //q4();
         //q5();
@@ -34,6 +35,21 @@ public class lab1 {
                 System.out.println("Wrong!");
             }
         }
+    }
+
+    public static void q2() {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int num;
+        int i = 0;
+        while (i < 3) {
+            System.out.print("Input number: ");
+            System.out.print("Enter new number: ");
+            num = scanner.nextInt();
+            sum += num;
+            i++;
+        }
+        System.out.println("Sum: " + sum);
     }
     public static void q3() {
         Scanner scanner = new Scanner(System.in);
