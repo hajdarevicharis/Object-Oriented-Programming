@@ -8,8 +8,9 @@ public class lab1 {
         //q4();
         //q5();
         //q6();
-        q7(5);
-        q7(9);
+        //q7(5);
+        //q7(9);
+        q8(5);
     }
 
     public static void q3() {
@@ -87,5 +88,13 @@ public class lab1 {
         }
 
         scanner.close();
+    }
+    public static void q8(int n) {
+        for(int i = 1; i <= n; i++) {
+            for(int j = 0; j < i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 }
