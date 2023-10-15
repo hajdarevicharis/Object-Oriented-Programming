@@ -10,7 +10,8 @@ public class lab1 {
         //q6();
         //q7(5);
         //q7(9);
-        q8(5);
+        //q8(5);
+        q9(5);
     }
 
     public static void q3() {
@@ -91,6 +92,15 @@ public class lab1 {
     }
     public static void q8(int n) {
         for(int i = 1; i <= n; i++) {
+            for(int j = 0; j < i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void q9(int n) {
+        for(int i = n; i >= 0; i--) {
             for(int j = 0; j < i; j++) {
                 System.out.print("* ");
             }
