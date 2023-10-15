@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class lab1 {
     public static void main(String[] args) {
+        q1();
         //q3();
         //q4();
         //q5();
@@ -16,9 +17,24 @@ public class lab1 {
         //q9(5);
         //q10(5);
         //q11(5);
-        q12();
+        //q12();
     }
 
+    public static void q1() {
+        Scanner scanner = new Scanner(System.in);
+        String pwd;
+        while(true) {
+            System.out.print("Guess: ");
+            pwd = scanner.nextLine();
+            if(pwd.equals("hajdarevicharis")) {
+                System.out.println("Correct!");
+                break;
+            }
+            else {
+                System.out.println("Wrong!");
+            }
+        }
+    }
     public static void q3() {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
