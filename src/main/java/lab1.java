@@ -1,5 +1,7 @@
 package org.example;
 import javax.swing.text.Style;
+
+import java.util.Random;
 import java.util.Scanner;
 
 public class lab1 {
@@ -13,7 +15,8 @@ public class lab1 {
         //q8(5);
         //q9(5);
         //q10(5);
-        q11(5);
+        //q11(5);
+        q12();
     }
 
     public static void q3() {
@@ -128,4 +131,25 @@ public class lab1 {
         }
     }
 
+    public static void q12() {
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        int randomNum = random.nextInt(100) + 1;
+        int guesses = 0;
+        while (true) {
+            System.out.print("Guess: ");
+            int guess = scanner.nextInt();
+            guesses++;
+            if(guess == randomNum) {
+                System.out.println("Congratulations!");
+                break;
+            }
+            if(guess > randomNum) {
+                System.out.println("Your number is smaller, number of guesses: " + guesses);
+            }
+            if(guess < randomNum) {
+                System.out.println("Your number is greater, number of guesses: " + guesses);
+            }
+        }
+    }
 }
