@@ -1,13 +1,82 @@
 package org.example;
 import javax.swing.text.Style;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class lab1 {
+    public static void printEvenOdd(int[] numbers) {
+        int even = 0;
+        int odd = 0;
+        int zero = 0;
+
+        for (int i = 0; i <= numbers.length-1; i++) {
+            if (numbers[i] % 2 == 0) {
+                even++;
+            }
+            if (numbers[i] % 2 != 0) {
+                odd++;
+            }
+            if(numbers[i] == 0) {
+                zero++;
+            }
+        }
+
+        System.out.println("Even numbers: " + even);
+        System.out.println("Odd numbers: " + odd);
+        System.out.println("Zero's: " + zero);
+    }
+
+    public static void printWordsFromSentence(String sentence) {
+
+        String[] words = sentence.split(" ");
+
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+    public static void pyramid(int rows) {
+        for(int i = 0; i <= rows; i++) {
+            for(int j = 0; j <= i; j++) {
+                System.out.print("* ");
+                if(j == i) {
+                    System.out.println(" ");
+                }
+            }
+        }
+    }
+
+    public static void complexPyramid(int rows) {
+        for (int i = 1; i <= rows*2; i+=2) {
+            for (int j = 0; j < ((rows*2)-i)/2; j++){
+                System.out.print(" ");
+            }
+            for(int k = 0; k < i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static int fibonacci(int num) {
+        if(num == 0) {
+            return 0;
+        }
+        if (num == 1) {
+            return 1;
+        } else {
+            return fibonacci(num-1) + fibonacci(num-2);
+        }
+    }
+
+    //0 1 1 2 3 5
+
+
     public static void main(String[] args) {
         //q1();
-        q2();
+        //q2();
         //q3();
         //q4();
         //q5();
@@ -19,6 +88,13 @@ public class lab1 {
         //q10(5);
         //q11(5);
         //q12();
+        //addNumbersToList(5,6,3);
+        //printEvenOdd(new int[]{5,4,3,5,7,8,9,0});
+        //String sentence = "this is a new sentence";
+        //printWordsFromSentence(sentence);
+        //pyramid(5);
+        //complexPyramid(10);
+        System.out.println(fibonacci(10));
     }
 
     public static void q1() {
@@ -184,4 +260,6 @@ public class lab1 {
             }
         }
     }
+
+
 }
