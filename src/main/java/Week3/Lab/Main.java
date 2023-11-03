@@ -7,7 +7,7 @@ public class Main {
         DbConnect db = new DbConnect();
 
         try {
-            db.getAllTasks();
+            db.getAllTasks(); 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
