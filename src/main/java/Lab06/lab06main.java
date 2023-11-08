@@ -7,8 +7,17 @@ public class lab06main {
         int[] values = {1,8,3,4,5,7,8};
         //System.out.println("smallest: " + smallest(values));
         //System.out.println("index of smallest: " + indexOfSmallest(values));
-        System.out.println("index of smallest with starting index is: " + indexOfSmallestWithStartingIndex(values, 1));
-
+        //System.out.println("index of smallest with starting index is: " + indexOfSmallestWithStartingIndex(values, 1));
+        System.out.println("original array is: ");
+        for (int num : values) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        System.out.println("swapped array is: ");
+        swap(values, 1, 4);
+        for (int num : values) {
+            System.out.print(num + " ");
+        }
     }
     public static int smallest(int[] array) {
         int smallest = 999;
@@ -41,5 +50,14 @@ public class lab06main {
             }
         }
         return index;
+    }
+// 0 5 8
+    public static void swap(int[] array, int index1, int index2) {
+        int temp;
+        for (int i = 0; i <= array.length - 1; i++) {
+            temp = array[index1];
+            array[index1] = array[index2];
+            array[index2] = temp;
+        }
     }
 }
