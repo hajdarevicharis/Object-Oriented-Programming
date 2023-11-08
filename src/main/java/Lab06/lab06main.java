@@ -1,22 +1,48 @@
 package Lab06;
-
+import Lab06.classes.binarySearch;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class lab06main {
     public static void main(String[] args) {
         int[] values = {1,8,3,4,5,7,8};
+        binarySearch binSrch = new binarySearch();
+
+
+
         //System.out.println("smallest: " + smallest(values));
         //System.out.println("index of smallest: " + indexOfSmallest(values));
         //System.out.println("index of smallest with starting index is: " + indexOfSmallestWithStartingIndex(values, 1));
-        System.out.println("original array is: ");
-        for (int num : values) {
-            System.out.print(num + " ");
-        }
+        //System.out.println("original array is: ");
+        //for (int num : values) {
+        //    System.out.print(num + " ");
+        //}
+        //System.out.println();
+        //System.out.println("swapped array is: ");
+        //swap(values, 1, 4);
+        //for (int num : values) {
+        //    System.out.print(num + " ");
+        //}
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.println("array: " + Arrays.toString(values));
         System.out.println();
-        System.out.println("swapped array is: ");
-        swap(values, 1, 4);
-        for (int num : values) {
-            System.out.print(num + " ");
+
+        System.out.println("Enter searched number: ");
+        String searchedValue = reader.nextLine();
+        int searchedValueInt = Integer.parseInt(searchedValue);
+        System.out.println();
+
+        boolean binSrchBool = binSrch.binarySearchMethod(values, searchedValueInt);
+
+
+        System.out.println("Your searched number is: " + searchedValue);
+        if (binSrchBool) {
+            System.out.println(searchedValue + " is in the array");
+        } else {
+            System.out.println("Your " + searchedValue + " is not in the array");
         }
     }
     public static int smallest(int[] array) {
