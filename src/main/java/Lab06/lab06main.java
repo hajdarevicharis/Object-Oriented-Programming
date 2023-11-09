@@ -24,7 +24,7 @@ public class lab06main {
         //for (int num : values) {
         //    System.out.print(num + " ");
         //}
-
+        /*
         Scanner reader = new Scanner(System.in);
 
         System.out.println("array: " + Arrays.toString(values));
@@ -44,6 +44,10 @@ public class lab06main {
         } else {
             System.out.println("Your " + searchedValue + " is not in the array");
         }
+
+         */
+
+        printElegantly(values);
     }
     public static int smallest(int[] array) {
         int smallest = 999;
@@ -85,5 +89,16 @@ public class lab06main {
             array[index1] = array[index2];
             array[index2] = temp;
         }
+    }
+
+    public static int printElegantly(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            System.out.print(array[i] + ", ");
+        }
+
+        System.out.println(array[array.length - 1]);
+
+        return 0;
+
     }
 }
