@@ -25,11 +25,13 @@ public class nightSky {
 
     public static String printLine(int width, int height) {
         Random random = new Random();
+        int counter = 0;
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 boolean printStar = random.nextBoolean();
                 if (printStar) {
                     System.out.print("* ");
+                    counter++;
                 } else {
                     System.out.print(" ");
                 }
@@ -37,6 +39,7 @@ public class nightSky {
             }
             System.out.println();
         }
+        System.out.println("Stars in your program: " + counter);
         return " ";
     }
 
