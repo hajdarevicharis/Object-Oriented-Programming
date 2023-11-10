@@ -1,5 +1,6 @@
 package Lab06;
 import Lab06.classes.binarySearch;
+import Lab06.classes.nightSky;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -47,7 +48,11 @@ public class lab06main {
 
          */
 
-        printElegantly(values);
+        //printElegantly(values);
+
+        nightSky nghtSky = new nightSky(20, 10, 0.2);
+
+        nghtSky.printLine(20);
     }
     public static int smallest(int[] array) {
         int smallest = 999;
