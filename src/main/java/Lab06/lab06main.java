@@ -52,7 +52,7 @@ public class lab06main {
 
         nightSky nghtSky = new nightSky(20, 10, 0.2);
 
-        nghtSky.printLine(20);
+        nghtSky.printLine(15, 5);
     }
     public static int smallest(int[] array) {
         int smallest = 999;

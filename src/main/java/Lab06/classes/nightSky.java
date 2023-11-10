@@ -23,19 +23,21 @@ public class nightSky {
         this.density = density;
     }
 
-    public static String printLine(int width) {
+    public static String printLine(int width, int height) {
         Random random = new Random();
-        for (int i = 0; i < width - 1; i++) {
-            boolean printStar = random.nextBoolean();
-            if(printStar) {
-                System.out.print("* ");
-            } else {
-                System.out.print(" ");
-            }
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                boolean printStar = random.nextBoolean();
+                if (printStar) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print(" ");
+                }
 
+            }
+            System.out.println();
         }
         return " ";
     }
 
-    public
 }
