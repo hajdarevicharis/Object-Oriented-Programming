@@ -4,6 +4,8 @@ import Lab06.classes.nightSky;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import Lab06.LibrarySystem.Library;
+import Lab06.LibrarySystem.Book;
 
 public class lab06main {
     public static void main(String[] args) {
@@ -50,9 +52,25 @@ public class lab06main {
 
         //printElegantly(values);
 
-        nightSky nghtSky = new nightSky(20, 10, 0.2);
+        //nightSky nghtSky = new nightSky(20, 10, 0.2);
 
-        nghtSky.printLine(3, 3);
+        //nightSky.printLine(3, 3);
+
+        Book knjiga = new Book("Haki", "Haris", 2023);
+        Library biblioteka = new Library();
+        biblioteka.addBook(new Book("Hajdarevic","Haris",2023));
+        biblioteka.addBook(new Book("Hajdarevic1","Haris2",2022));
+        biblioteka.addBook(new Book("Hajdarevic2","Haris35534",2021));
+        biblioteka.addBook(new Book("Hajdarevic2","Haris3",2021));
+        biblioteka.addBook(new Book("Hajdarevic3","Haris4",2020));
+        //biblioteka.printBooks();
+
+        ArrayList<Book> results = biblioteka.searchByTitle("Hajdarevic2");
+        for(Book book : results) {
+            System.out.println(book);
+        }
+
+
     }
     public static int smallest(int[] array) {
         int smallest = 999;
