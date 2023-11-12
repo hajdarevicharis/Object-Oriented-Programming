@@ -1,7 +1,6 @@
 package Lab06.LibrarySystem;
-
 import java.util.ArrayList;
-
+import Lab06.LibrarySystem.StringUtils;
 
 
 public class Library extends Book {
@@ -10,19 +9,6 @@ public class Library extends Book {
     public Library() {
 
     }
-
-    public ArrayList<Book> searchByTitle(String title) {
-        ArrayList<Book> found = new ArrayList<Book>();
-        for (Book book : books) {
-            if (book.getBookName().equalsIgnoreCase(title)) {
-                found.add(book);
-            }
-        }
-        return found;
-    }
-
-
-
     public String printBooks() {
         for (Book book : this.books) {
             System.out.println("Title: " + book.getBookName() + ", Publisher name: " + book.getPublisherName() + ", Publish year: " + book.getPublishYear());
@@ -39,7 +25,36 @@ public class Library extends Book {
         return "Book library: " + "\nPublisher name: " + getPublisherName() + "\nBook name: " + getBookName() + "\nPublish year" + getPublishYear();
     }
 
-    public String haki() {
-        return getPublisherName();
-    }
+   public ArrayList<Book> searchByPublisher(String publisher) {
+        ArrayList<Book> returnList = new ArrayList<>();
+
+        for(Book book : books) {
+            if(StringUtils.included(book.getPublisherName(), publisher)) {
+                returnList.add(book);
+            }
+        }
+        return returnList;
+   }
+
+   public ArrayList<Book> searchByTitle(String title) {
+        ArrayList<Book> returnList = new ArrayList<>();
+
+        for(Book book : books) {
+            if(StringUtils.included(book.getBookName(), title)) {
+                returnList.add(book);
+            }
+        }
+        return returnList;
+   }
+
+   public ArrayList<Book> searchByYear(int year) {
+        ArrayList<Book> returnList = new ArrayList<>();
+
+        for(Book book : books) {
+            if(book.getPublishYear() == year) {
+                returnList.add(book);
+            }
+        }
+        return returnList;
+   }
 }

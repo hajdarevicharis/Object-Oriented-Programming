@@ -57,7 +57,7 @@ public class lab06main {
         //nightSky.printLine(3, 3);
 
         Book knjiga = new Book("Haki", "Haris", 2023);
-        Library biblioteka = new Library();
+        /*
         biblioteka.addBook(new Book("Hajdarevic","Haris",2023));
         biblioteka.addBook(new Book("Hajdarevic1","Haris2",2022));
         biblioteka.addBook(new Book("Hajdarevic2","Haris35534",2021));
@@ -65,8 +65,31 @@ public class lab06main {
         biblioteka.addBook(new Book("Hajdarevic3","Haris4",2020));
         //biblioteka.printBooks();
 
-        ArrayList<Book> results = biblioteka.searchByTitle("Hajdarevic2");
+
+        ArrayList<Book> results = biblioteka.searchByTitle("Hajdarevic2   ");
         for(Book book : results) {
+            System.out.println(book);
+        }
+*/
+        Library Library = new Library();
+
+        Library.addBook(new Book("Cheese Problems Solved", "Woodhead Publishing", 2007));
+        Library.addBook(new Book("The Stinky Cheese Man and Other Fairly Stupid Tales", "Penguin Group", 1992));
+        Library.addBook(new Book("NHL Hockey", "Stanley Kupp", 1952));
+        Library.addBook(new Book("Battle Axes", "Tom A. Hawk", 1851));
+
+        ArrayList<Book> result = Library.searchByTitle("Cheese");
+        for (Book book: result) {
+            System.out.println(book);
+        }
+
+        System.out.println("---");
+        for (Book book: Library.searchByPublisher("Penguin Group  ")) {
+            System.out.println(book);
+        }
+
+        System.out.println("---");
+        for (Book book: Library.searchByYear(1851)) {
             System.out.println(book);
         }
 
