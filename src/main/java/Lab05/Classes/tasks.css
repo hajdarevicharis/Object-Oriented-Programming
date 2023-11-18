@@ -1,0 +1,23 @@
+/*
+1. Create a simple logging system that allows different components of a system to log messages.
+ Implement this system using both traditional class-based and record-based approaches.
+ Use lambda functions to define the logging behavior.
+
+Create an interface called Logger with a single method logMessage(String message)
+Implement a record named RecordLogger that implements the Logger interface.
+Implement the logMessage method to print the log message with the logger name.
+Implement a class named ClassLogger that also implements the Logger interface.
+The class should have a constructor that takes a String representing the logger name.
+Implement the logMessage method to print the log message with the logger name.
+In the main method, Instantiate both the RecordLogger and ClassLogger with different names.
+Use lambda functions to log messages with each logger.
+
+
+
+
+
+
+
+
+
+ */

@@ -1,4 +1,4 @@
-package org.example;
+package Lab01;
 import javax.swing.text.Style;
 
 import java.util.ArrayList;

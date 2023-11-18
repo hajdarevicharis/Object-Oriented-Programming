@@ -31,5 +31,14 @@ public class DbConnect {
         }
     }
 
+    public void getCustomerByID(int id) throws SQLException {
+        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM tasks WHERE id = ?");
+        statement.setInt(1, id);
+        ResultSet rs = statement.executeQuery();
+
+        while(rs.next()) {
+            System.out.println(rs.getString("task_description") + " - " + rs.getString("task_status"));
+        }
+    }
 
 }

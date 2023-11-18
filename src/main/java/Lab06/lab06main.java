@@ -1,11 +1,14 @@
 package Lab06;
 import Lab06.classes.binarySearch;
-import Lab06.classes.nightSky;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-import Lab06.LibrarySystem.Library;
 import Lab06.LibrarySystem.Book;
+import Lab06.HashMap.Dictionaryy;
+import Lab06.Interface.TextUserInterface;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 
 public class lab06main {
     public static void main(String[] args) {
@@ -70,7 +73,7 @@ public class lab06main {
         for(Book book : results) {
             System.out.println(book);
         }
-*/
+
         Library Library = new Library();
 
         Library.addBook(new Book("Cheese Problems Solved", "Woodhead Publishing", 2007));
@@ -92,6 +95,38 @@ public class lab06main {
         for (Book book: Library.searchByYear(1851)) {
             System.out.println(book);
         }
+
+
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("matti", "mage");
+        map.put("haris", "haki");
+        map.put("mikael", "mixu");
+
+        PromissoryNote mattisNote = new PromissoryNote();
+        mattisNote.setLoan("Arto", 51.5);
+        mattisNote.setLoan("Mikael", 30);
+        mattisNote.setLoan("Mikael", 20);
+
+
+        System.out.println(mattisNote.howMuchIsTheDebt("Arto"));
+        System.out.println(mattisNote.howMuchIsTheDebt("Mikael"));
+
+
+          */
+        //HashMap<String, String> rjecnik = new HashMap<>();
+        Dictionaryy rjecnik = new Dictionaryy();
+        rjecnik.add("Pas", "Dog");
+        rjecnik.add("Macka", "Cat");
+        rjecnik.add("Haki", "Haris");
+
+        Scanner reader = new Scanner(System.in);
+        Dictionaryy dict = new Dictionaryy();
+
+        TextUserInterface ui = new TextUserInterface(reader,dict);
+        ui.start();
+
+        Map<String, String> mapa = new HashMap<>();
 
 
     }
